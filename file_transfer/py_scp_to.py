@@ -7,7 +7,6 @@ def upload(local_path, remote_ip, uname, upasswd, port=22):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     try:
-        # ssh.connect('192.168.0.104', 22, 'owhyt', 'oubuntu')
         ssh.connect(remote_ip, port, uname, upasswd)
     except paramiko.ssh_exception.AuthenticationException as passwd_wrong:
         print(passwd_wrong, "远程密码错误")
@@ -54,4 +53,4 @@ def upload(local_path, remote_ip, uname, upasswd, port=22):
         ssh.close()
 
 
-upload("/home/owhyt/python_test/transmit_sample.txt", "192.168.0.104", "owhyt", "oubuntu")
+upload("/home/user/python_test/transmit_sample.txt", "192.168.1.1", "username", "userpasswd")
