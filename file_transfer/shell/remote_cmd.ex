@@ -26,4 +26,7 @@ if {$argc == 5} {
     send "exit\n"
 }
 send "exit\n"
+if {$username == "root"} {
+   # set root user operations 
+}
 expect eof
