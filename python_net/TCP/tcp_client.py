@@ -1,6 +1,5 @@
 """
 tcp 客户端程序
-重点代码
 """
 
 from socket import *

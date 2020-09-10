@@ -7,8 +7,10 @@ import socket
 # 创建流式套接字
 sockfd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# 　绑定地址
+# 　绑定本机地址
 sockfd.bind(('127.0.0.1', 8888))
+# sockfd.bind(('localhost', 8888))
+# sockfd.bind(('0.0.0.0', 8888))
 
 # 　监听，设置最多连接数量
 sockfd.listen(5)
